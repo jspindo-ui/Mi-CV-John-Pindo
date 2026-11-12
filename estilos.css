@@ -1,22 +1,28 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #08091a;
-    color: white;
+    background-color: #f3f4f9;
+    color: #24243a;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #191a2b;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 8%;
+    background-color: #191a31;
 }
 
 nav h2 {
-    color: #8a2be2;
+    color: #b794f4;
+    margin: 0;
 }
 
 nav a {
@@ -24,189 +30,275 @@ nav a {
     text-decoration: none;
 }
 
-.presentacion {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 350px;
-    padding: 30px;
+nav a:hover {
+    color: #b794f4;
 }
 
-.informacion h1 {
-    font-size: 40px;
+/* PRESENTACION */
+
+.presentacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+    background: linear-gradient(120deg, #191a31, #6143ab);
+    color: white;
+}
+
+.informacion {
+    flex: 1;
 }
 
 .informacion h3 {
-    color: #8a2be2;
+    color: #d5c1ff;
+    letter-spacing: 3px;
 }
 
+.informacion h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
 
-.presentacion {
-    gap: 60px;
+.informacion p {
+    font-size: 17px;
+    line-height: 1.6;
 }
 
 .foto img {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
+    width: 260px;
+    height: 300px;
     object-fit: cover;
-    border: 4px solid #8a2be2;
+    object-position: center top;
+    border-radius: 25px;
+    border: 5px solid white;
+    box-shadow: 0 5px 25px #24243a;
 }
 
+/* PERFIL */
 
 .perfil {
-    background-color: #191a2b;
-    padding: 40px;
-    margin: 30px;
+    background-color: white;
+    margin: 40px 8%;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px #dddddd;
+}
+
+.titulo-perfil {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-perfil p {
+    color: #7856c5;
+    font-size: 25px;
+}
+
+.titulo-perfil h4 {
+    color: #7856c5;
+    letter-spacing: 2px;
+}
+
+.titulo-perfil h2 {
+    font-size: 32px;
+}
+
+.contenido-perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.datos {
+    flex: 1;
+}
+
+.datos p {
+    background-color: #f3efff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.descripcion-perfil {
+    flex: 1;
+    background-color: #f3efff;
+    padding: 25px;
     border-radius: 15px;
 }
 
-.perfil h2 {
-    color: #8a2be2;
-    font-size: 28px;
+.descripcion-perfil h3 {
+    color: #6143ab;
 }
 
-.perfil p {
-    font-size: 17px;
+.descripcion-perfil p {
     line-height: 1.8;
 }
 
+/* FORMACION */
 
 .formacion {
-    padding: 40px;
-    margin: 30px;
+    margin: 40px 8%;
 }
 
 .formacion h2 {
-    color: #8a2be2;
+    color: #6143ab;
     font-size: 28px;
 }
 
 .estudios {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
     gap: 20px;
 }
 
 .estudio {
-    background-color: #191a2b;
+    flex: 1;
+    background-color: white;
     padding: 25px;
     border-radius: 15px;
-    width: 50%;
+    border-left: 5px solid #7856c5;
 }
 
 .estudio h3 {
-    color: #b794f4;
+    color: #6143ab;
 }
 
+/* EXPERIENCIA */
 
 .experiencia {
-    padding: 40px;
-    margin: 30px;
+    margin: 40px 8%;
 }
 
 .experiencia h2 {
-    color: #8a2be2;
+    color: #6143ab;
     font-size: 28px;
 }
 
 .trabajos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
     gap: 20px;
 }
 
 .trabajo {
-    background-color: #191a2b;
+    flex: 1;
+    background-color: white;
     padding: 25px;
     border-radius: 15px;
-    flex: 1;
+    border-top: 5px solid #7856c5;
 }
 
 .trabajo h3 {
-    color: #b794f4;
-}
-
-.trabajo h4 {
-    color: white;
+    color: #6143ab;
 }
 
 .trabajo p {
     line-height: 1.6;
 }
 
+/* HABILIDADES */
 
 .habilidades {
-    padding: 40px;
-    margin: 30px;
+    margin: 40px 8%;
 }
 
 .habilidades h2 {
-    color: #8a2be2;
+    color: #6143ab;
     font-size: 28px;
 }
 
 .lista-habilidades {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
 }
 
 .habilidad {
-    background-color: #191a2b;
+    background-color: #6143ab;
     color: white;
     padding: 15px 20px;
     border-radius: 10px;
-    border: 1px solid #8a2be2;
 }
 
+/* DISEÑO PARA CELULARES */
 
 @media (max-width: 768px) {
 
     nav {
-        flex-direction: column;
-        gap: 15px;
+        justify-content: center;
     }
 
     .presentacion {
         flex-direction: column;
         text-align: center;
-        gap: 25px;
+        padding: 35px 20px;
     }
 
     .informacion h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .foto img {
-        width: 180px;
-        height: 180px;
+        width: 210px;
+        height: 240px;
     }
 
-    .perfil, .formacion,
-    .experiencia, .habilidades {
-        margin: 15px;
+    .perfil {
+        margin: 20px;
         padding: 20px;
+    }
+
+    .contenido-perfil {
+        flex-direction: column;
     }
 
     .estudios {
         flex-direction: column;
     }
 
-    .estudio {
-        width: auto;
-    }
-
     .trabajos {
         flex-direction: column;
     }
 
+    .formacion,
+    .experiencia,
+    .habilidades {
+        margin: 30px 20px;
+    }
+}
+
+
+/* COLORES OSCUROS */
+
+body {
+    background-color: #101224;
+    color: white;
+}
+
+.perfil, .estudio, .trabajo {
+    background-color: #1d2138;
+    color: white;
+    box-shadow: 0 4px 15px #08091a;
+}
+
+.datos p, .descripcion-perfil {
+    background-color: #292d49;
+    color: white;
+}
+
+.formacion h2,
+.experiencia h2,
+.habilidades h2 {
+    color: #b794f4;
+}
+
+.titulo-perfil h2 {
+    color: white;
+}
+
+.estudio h3,
+.trabajo h3,
+.descripcion-perfil h3 {
+    color: #b794f4;
 }
